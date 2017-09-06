@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain.Enums
 {
-	public enum CallPutFlag : byte
+	public enum FileFormatEnum
 	{
-		C = 1,
-		P = 2
+		XML = 1,
+		CSV = 2
 	}
 }

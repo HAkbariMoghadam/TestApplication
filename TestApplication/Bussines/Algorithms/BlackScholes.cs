@@ -29,11 +29,11 @@ namespace Bussines.Algorithms
 
 			d1 = (Math.Log(stockPrice / strikePrice) + (riskFreeRate + volatilitys * volatilitys / 2.0) * yearsToExpire) / (volatilitys * Math.Sqrt(yearsToExpire));
 			d2 = d1 - volatilitys * Math.Sqrt(yearsToExpire);
-			if (callPutFlag == CallPutFlag.Call)
+			if (callPutFlag == CallPutFlag.C)
 			{
 				dBlackScholes = stockPrice * CND(d1) - strikePrice * Math.Exp(-riskFreeRate * yearsToExpire) * CND(d2);
 			}
-			else if (callPutFlag == CallPutFlag.Put)
+			else if (callPutFlag == CallPutFlag.P)
 			{
 				dBlackScholes = strikePrice * Math.Exp(-riskFreeRate * yearsToExpire) * CND(-d2) - stockPrice * CND(-d1);
 			}

@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TestApplication.Models;
 
 namespace TestApplication.Controllers
 {
 	public class HomeController : Controller
 	{
+		[HttpGet]
 		public ActionResult Index()
 		{
-			return View();
+			var model = new FinancialTransactionViewModel();
+			model.Reset();
+			return View(model);
 		}
 
-		public ActionResult About()
+		[HttpPost]
+		public ActionResult Index(FinancialTransactionViewModel model)
 		{
-			ViewBag.Message = "Your application description page.";
-
-			return View();
+			model.Reset();
+			return View(model);
 		}
 
-		public ActionResult Contact()
-		{
-			ViewBag.Message = "Your contact page.";
 
-			return View();
-		}
 	}
 }
