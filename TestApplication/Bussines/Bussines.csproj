@@ -46,12 +46,11 @@
     <Compile Include="Algorithms\BlackScholes.cs" />
     <Compile Include="IAlgorithms\IBlackScholes.cs" />
     <Compile Include="IOC\BussinesContainer.cs" />
+    <Compile Include="IServices\IFinantialTransactionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FinantialTransactionService.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IServices\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{b995e45c-8297-4887-ba90-40f583c00520}</Project>

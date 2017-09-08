@@ -13,15 +13,18 @@ namespace TestApplication.Controllers
 		public ActionResult Index()
 		{
 			var model = new FinancialTransactionViewModel();
-			model.Reset();
 			return View(model);
 		}
 
 		[HttpPost]
 		public ActionResult Index(FinancialTransactionViewModel model)
 		{
-			model.Reset();
-			return View(model);
+            if (ModelState.IsValid)
+            {
+                
+            }
+
+            return View(model);
 		}
 
 

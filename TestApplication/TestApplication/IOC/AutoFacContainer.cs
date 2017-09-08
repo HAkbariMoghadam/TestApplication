@@ -2,6 +2,7 @@
 using Autofac.Integration.Mvc;
 using Bussines.IOC;
 using System.Web.Mvc;
+using TestApplication.Controllers;
 
 namespace TestApplication.IOC
 {
@@ -11,9 +12,9 @@ namespace TestApplication.IOC
 		{
 			var builder = new ContainerBuilder();
 
-			//builder.RegisterType<ShopingController>();
+            builder.RegisterModule(new BussinesContainer());
 
-			builder.RegisterModule(new BussinesContainer());
+            builder.RegisterType<HomeController>();
 
 			var container = builder.Build();
 			DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

@@ -1,4 +1,5 @@
-﻿using Domain.Enums;
+﻿using Domain.Entities;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,7 +10,14 @@ namespace TestApplication.Models
 {
 	public class FinancialTransactionViewModel
 	{
-		[Required(ErrorMessage = "Please Select Transaction File")]
+        public FinancialTransactionViewModel()
+        {
+            this.File = null;
+			this.FileFormats = FileFormatEnum.CSV;
+            FinancialTransactions = new List<FinancialTransaction>();
+        }
+
+        [Required(ErrorMessage = "Please Select Transaction File")]
 		[Display(Name = "Transaction File")]
 		public HttpPostedFileBase File { get; set; }
 
@@ -17,13 +25,7 @@ namespace TestApplication.Models
 		[Display(Name = "File Formats")]
 		public FileFormatEnum FileFormats { get; set; }
 
-
-
-		public void Reset()
-		{
-			this.File = null;
-			this.FileFormats = FileFormatEnum.CSV;
-		}
+        public List<FinancialTransaction> FinancialTransactions { get; set; }
 
 	}
 }

@@ -24,7 +24,9 @@ namespace Domain.Entities
 		public int StrikePrice { get; set; }
 		[XmlAttribute(AttributeName = "ccy")]
 		public string CCY { get; set; }
-	}
+
+        public double Price { get; set; }
+    }
 
 	[XmlRoot(ElementName = "portfolio")]
 	public class Portfolio
