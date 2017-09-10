@@ -12,6 +12,7 @@ namespace Bussines.IOC
 		{
 			builder.RegisterInstance(new BlackScholes()).As<IBlackScholes>();
 			builder.RegisterType(typeof(FinantialTransactionService)).As<IFinantialTransactionService>();
+            builder.RegisterInstance(new SeedStarterDataService()).As<ISeedStarterDataService>();
 		}
 	}
 }

@@ -26,7 +26,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			@Html.LabelFor(model => model.FileFormats)
-			@foreach (var value in Enum.GetValues(typeof(Domain.Enums.FileFormatEnum)))
+			@foreach (var value in Enum.GetValues(typeof(Common.Share.Enums.FileFormatEnum)))
 				{
 				@Html.RadioButtonFor(model => model.FileFormats, value)
 				@Html.Label(value.ToString())<text>&nbsp;</text>

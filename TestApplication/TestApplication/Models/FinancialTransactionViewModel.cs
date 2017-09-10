@@ -1,14 +1,12 @@
-﻿using Domain.Entities;
-using Domain.Enums;
-using System;
+﻿using Common.Share.Enums;
+using Domain.Entities;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Web;
 
 namespace TestApplication.Models
 {
-	public class FinancialTransactionViewModel
+    public class FinancialTransactionViewModel
 	{
         public FinancialTransactionViewModel()
         {

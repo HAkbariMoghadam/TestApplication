@@ -48,21 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CsvMapper\FinancialTransactionMapper.cs" />
     <Compile Include="Helpers\ConfigurationReader.cs" />
     <Compile Include="Helpers\CsvHelpers.cs" />
     <Compile Include="Helpers\ValidationHelpers.cs" />
     <Compile Include="Helpers\XmlHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Share\Enums\FileFormatEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Domain\TestApplication.Domain.csproj">
-      <Project>{2aa80375-4354-42eb-9cef-4fd00824e4a0}</Project>
-      <Name>TestApplication.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

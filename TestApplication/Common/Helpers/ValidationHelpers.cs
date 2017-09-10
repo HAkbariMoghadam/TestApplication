@@ -1,5 +1,5 @@
 ﻿
-using Domain.Enums;
+using Common.Share.Enums;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

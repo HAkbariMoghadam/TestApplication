@@ -1,8 +1,7 @@
 ﻿using CsvHelper.Configuration;
 using Domain.Entities;
-using Domain.Enums;
 
-namespace Common.CsvMapper
+namespace Domain.CsvMapper
 {
 	public sealed class FinancialTransactionMapper : CsvClassMap<FinancialTransaction>
 	{

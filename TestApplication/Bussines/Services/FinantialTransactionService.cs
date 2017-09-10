@@ -11,8 +11,9 @@ using System.Reflection;
 using Domain.Enums;
 using Bussines.IAlgorithms;
 using Common.Helpers;
-using Common.CsvMapper;
 using Data;
+using Domain.CsvMapper;
+using Common.Share.Enums;
 
 namespace Bussines.Services
 {
@@ -61,7 +62,8 @@ namespace Bussines.Services
 							{
 								var expireDate = Convert.ToDateTime(FinancialTransactionItem.ExpiryDate);
 								double yearOfExpiery = (expireDate - currentDate).TotalDays / 365.25;
-								if (!Enum.TryParse(FinancialTransactionItem.CallPutFlag, out CallPutFlag callPutFlag))
+                                CallPutFlag callPutFlag;
+                                if (!Enum.TryParse(FinancialTransactionItem.CallPutFlag, out callPutFlag))
 								{
 									FinancialTransactionItem.Result = "Invalid Data";
 								}

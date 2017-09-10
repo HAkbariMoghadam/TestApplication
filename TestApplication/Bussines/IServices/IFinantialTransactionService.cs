@@ -1,5 +1,5 @@
-﻿using Domain.Entities;
-using Domain.Enums;
+﻿using Common.Share.Enums;
+using Domain.Entities;
 using System.Collections.Generic;
 using System.IO;
 
