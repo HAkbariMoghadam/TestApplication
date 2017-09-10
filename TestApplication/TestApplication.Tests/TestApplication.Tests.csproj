@@ -91,21 +91,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Bussines\Bussines.csproj">
+    <ProjectReference Include="..\Bussines\TestApplication.Bussines.csproj">
       <Project>{f52f8898-76f1-46de-8042-df3aeb2efdb2}</Project>
-      <Name>Bussines</Name>
+      <Name>TestApplication.Bussines</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{b995e45c-8297-4887-ba90-40f583c00520}</Project>
       <Name>Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
+    <ProjectReference Include="..\Domain\TestApplication.Domain.csproj">
       <Project>{2aa80375-4354-42eb-9cef-4fd00824e4a0}</Project>
-      <Name>Domain</Name>
+      <Name>TestApplication.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TestApplication\TestApplication.csproj">
+    <ProjectReference Include="..\TestApplication\TestApplication.Web.csproj">
       <Project>{3F729F85-CA47-480E-9EF3-8F393A1C3AAF}</Project>
-      <Name>TestApplication</Name>
+      <Name>TestApplication.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

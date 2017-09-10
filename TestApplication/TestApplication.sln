@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{3F729F85-CA47-480E-9EF3-8F393A1C3AAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication.Web", "TestApplication\TestApplication.Web.csproj", "{3F729F85-CA47-480E-9EF3-8F393A1C3AAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication.Tests", "TestApplication.Tests\TestApplication.Tests.csproj", "{94CC59FC-C010-440C-93C9-8DFF4DBF6A8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bussines", "Bussines\Bussines.csproj", "{F52F8898-76F1-46DE-8042-DF3AEB2EFDB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication.Bussines", "Bussines\TestApplication.Bussines.csproj", "{F52F8898-76F1-46DE-8042-DF3AEB2EFDB2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{B995E45C-8297-4887-BA90-40F583C00520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{2AA80375-4354-42EB-9CEF-4FD00824E4A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication.Domain", "Domain\TestApplication.Domain.csproj", "{2AA80375-4354-42EB-9CEF-4FD00824E4A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication.Data", "Data\TestApplication.Data.csproj", "{261C0CFA-8719-440D-AC9B-0B9E0B55BFDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2AA80375-4354-42EB-9CEF-4FD00824E4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2AA80375-4354-42EB-9CEF-4FD00824E4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2AA80375-4354-42EB-9CEF-4FD00824E4A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{261C0CFA-8719-440D-AC9B-0B9E0B55BFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{261C0CFA-8719-440D-AC9B-0B9E0B55BFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{261C0CFA-8719-440D-AC9B-0B9E0B55BFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{261C0CFA-8719-440D-AC9B-0B9E0B55BFDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
