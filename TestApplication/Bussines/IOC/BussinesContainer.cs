@@ -11,7 +11,7 @@ namespace Bussines.IOC
 		protected override void Load(ContainerBuilder builder)
 		{
 			builder.RegisterInstance(new BlackScholes()).As<IBlackScholes>();
-            builder.RegisterInstance(new FinantialTransactionService()).As<IFinantialTransactionService>();
-        }
+			builder.RegisterType(typeof(FinantialTransactionService)).As<IFinantialTransactionService>();
+		}
 	}
 }

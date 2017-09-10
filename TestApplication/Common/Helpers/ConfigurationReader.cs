@@ -9,7 +9,7 @@ namespace Common.Helpers
 {
     public class ConfigurationReader
     {
-        public static T ReadAppConfig<T>(string key, T defaultValue, string seperator = "", string keySuffix = "") where T : Type
+        public static string ReadAppConfig(string key, string defaultValue, string seperator = "", string keySuffix = "")
         {
             string finalKey = key;
             if (!string.IsNullOrWhiteSpace(seperator) && !string.IsNullOrWhiteSpace(keySuffix))
@@ -17,7 +17,7 @@ namespace Common.Helpers
                 finalKey += seperator + keySuffix;
             }
 
-            return ConfigurationManager.AppSettings[finalKey] != null ? ConfigurationManager.AppSettings[finalKey] as T : defaultValue;
+            return ConfigurationManager.AppSettings[finalKey] != null ? ConfigurationManager.AppSettings[finalKey]  : defaultValue;
         }
     }
 }

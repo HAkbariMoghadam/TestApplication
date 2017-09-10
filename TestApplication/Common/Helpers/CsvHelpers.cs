@@ -9,7 +9,7 @@ namespace Common.Helpers
 	public class CsvHelpers
 	{
 
-		public List<T> ReadFile<T>(TextReader reader, Type Mapper = null) where T : class
+		public static List<T> ReadFile<T>(TextReader reader, Type Mapper = null) where T : class
 		{
 			var configuration = new CsvConfiguration();
 

@@ -6,12 +6,13 @@ namespace Common.Helpers
 {
 	public class XmlHelpers
 	{
-		public T ReadFile<T>(TextReader reader) where T : class
+		public static T ReadFile<T>(Stream reader) where T : class
 		{
-			using (var xmlReader = XmlReader.Create(reader, new XmlReaderSettings() { ConformanceLevel = ConformanceLevel.Document }))
-			{
-				return new XmlSerializer(typeof(T)).Deserialize(reader) as T;
-			}
+			reader.Position = 0;
+			var XmlSerializer = new XmlSerializer(typeof(T));
+
+			return XmlSerializer.Deserialize(reader) as T;
+
 		}
 	}
 }

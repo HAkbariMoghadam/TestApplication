@@ -7,6 +7,9 @@
 
 @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
+	@Html.AntiForgeryToken()
+
+	@Html.ValidationSummary()
 
 	<div class="row">
 		<div class="col-md-12">
@@ -30,8 +33,91 @@
 			<input type="submit" value="Result" class="btn btn-success" />
 		</div>
 	</div>
+	<hr />
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<tr>
+					<th>
+						Id
+					</th>
+					<th>
+						Name
+					</th>
+					<th>
+						Type
+					</th>
+					<th>
+						Style
+					</th>
+					<th>
+						CallPutFlag
+					</th>
+					<th>
+						ExpiryDate
+					</th>
+					<th>
+						StrikePrice
+					</th>
+					<th>
+						CCY
+					</th>
+					<th>
+						Price
+					</th>
+					<th>
+						Result
+					</th>
+				</tr>
+				@if (Model.FinancialTransactions.Count > 0)
+				{
+					foreach (var item in Model.FinancialTransactions)
+					{
+					<tr>
+						<td>
+							@Html.DisplayFor(modelItem => item.Id)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Name)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Type)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Style)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.CallPutFlag)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.ExpiryDate)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.StrikePrice)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.CCY)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Price)
+						</td>
+						<td>
+							@Html.DisplayFor(modelItem => item.Result)
+						</td>
+					</tr>
+					}
+				}
+				else
+				{
+				<tr>
+					<td colspan="10">No Data To Show!</td>
+				</tr>
+				}
+				<tr>
+					<td colspan="10">Sum:@Model.FinancialTransactions.Sum(t => t.Price)</td>
+				</tr>
+			</table>
+		</div>
+	</div>
 
-
-
-
-}  
+} 

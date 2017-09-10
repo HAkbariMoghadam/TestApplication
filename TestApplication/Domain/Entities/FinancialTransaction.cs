@@ -5,7 +5,6 @@ using System.Xml.Serialization;
 
 namespace Domain.Entities
 {
-	[XmlRoot(ElementName = "trade")]
 	public class FinancialTransaction
 	{
 		[XmlAttribute(AttributeName = "id")]
@@ -25,8 +24,9 @@ namespace Domain.Entities
 		[XmlAttribute(AttributeName = "ccy")]
 		public string CCY { get; set; }
 
-        public double Price { get; set; }
-    }
+		public double Price { get; set; }
+		public string Result { get; set; }
+	}
 
 	[XmlRoot(ElementName = "portfolio")]
 	public class Portfolio
