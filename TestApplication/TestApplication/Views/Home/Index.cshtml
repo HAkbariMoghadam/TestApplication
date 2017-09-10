@@ -2,14 +2,20 @@
 @{
 	ViewBag.Title = "Home Page";
 }
+<style>
+	.validation-summary-valid.alert.alert-danger {
+		display: none;
+	}
+</style>
 
 <h2>Please Upload Transaction File</h2>
+
 
 @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 	@Html.AntiForgeryToken()
 
-	@Html.ValidationSummary()
+	@Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
 
 	<div class="row">
 		<div class="col-md-12">
@@ -120,4 +126,5 @@
 		</div>
 	</div>
 
-} 
+}
+
