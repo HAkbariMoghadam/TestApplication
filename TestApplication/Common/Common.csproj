@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Helpers\ConfigurationReader.cs" />
     <Compile Include="Helpers\CsvHelpers.cs" />
+    <Compile Include="Helpers\DateTimeHelpers.cs" />
     <Compile Include="Helpers\ValidationHelpers.cs" />
     <Compile Include="Helpers\XmlHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

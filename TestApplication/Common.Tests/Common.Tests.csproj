@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="HelpersTests\ConfigurationHelpersTests.cs" />
     <Compile Include="HelpersTests\CSVHelpersTests.cs" />
+    <Compile Include="HelpersTests\DateTimeHelpers.cs" />
     <Compile Include="HelpersTests\ValidationHelpersTests.cs" />
     <Compile Include="HelpersTests\XMLHelpersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
